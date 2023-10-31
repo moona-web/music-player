@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assest/style/master.css">
+
+</head>
+<body>
+    <div class="music-player w-[50%] bg-white">
+       <div class="w-[90%] sm:ml-[15px] md:ml-[30px] flex flex-wrap justify-center">
+        <button class="caret lg:text-[50px] ml-[91%] pt-[5%]  sm:text-[30px]  fw-bolder">
+            <i class="bi bi-chevron-compact-down playListBtn"></i>
+        </button>
+        <img class="w-[70%] h-[500px] imgSong" src="./asset/IMG/heartBroken.jpg" alt="">
+       </div>
+        <div class="song flex flex-wrap justify-center">
+            <p class="song-name fw-bolder sm:text-[20px] w-full text-center md:text-[35px]  ">Make me move</p>
+            <p class="singer text-[20px]">test test</p>
+        </div>
+        <!-- Start Speed -->
+        <div class="speed flex text-[20px] md:text-[30px] lg:text-[40px] lg:gap-5 gap-2 justify-center">
+            <div class="shuflle mt-2 lg:text-[30px] md:mt-3 lg:mt-5">
+                <i class="bi bi-shuffle"></i>
+            </div>
+            <div class="prev mt-2 md:mt-3 ">
+                <i class="bi-skip-start-fill"></i>
+            </div>
+            <div class="stop md:text-[45px] lg:text-[60px]  text-[30px] bg-secondary">
+                <i class="bi-pause-circle-fill  hidden text-[blue] pouseSong"></i>
+                <i class="bi-play-circle-fill text-[blue] playSong "></i>
+            </div>
+            <div class="next mt-2 md:mt-3 ">
+                <i class="bi-skip-end-fill"></i>
+            </div>
+            <div class="repeat active cursor-pointer lg:text-[30px] mt-2 md:mt-3  lg:mt-5">
+                <i class="bi-repeat"></i>
+            </div>
+            <audio id="audio" preload="metadata" src="./asset/Songs/elvis.mp3"></audio>
+        </div>
+
+        <!-- Start Line -->
+        <div class="progress-bar flex justify-center cursor-pointer ">
+            <span class="current-progres"></span>
+        </div>
+
+        <!-- Time Spend -->
+       <div class="duration flex justify-around mb-5 mt-3 sm:text-[10px] md:text-[20px] ">
+        <div class="spend">02:17</div>
+        <div class="all-duration">03:45</div>
+       </div>
+
+       <!-- playlist -->
+      <div class="playList hidden bg-secondary position-absolute ">
+        <button class="text-[50px]  ml-[90%] mt-[3%] cursor-pointer">
+            <i class=" bi bi-x close-play-list"></i>
+        </button>
+        </div> 
+      </div>
+    </div>
+    
+    <script src="assest/JS/main.js"></script>
+</body>
+</html>

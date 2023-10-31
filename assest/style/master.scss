@@ -1,0 +1,47 @@
+body{
+    height: 100vh;
+    background-image: linear-gradient(to bottom, #2887e3 50%, #16191e 50%);
+}
+.music-player{
+    // max-width: 75em;
+    transform: translate(-50%, -50%);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    font-size: 16px;
+  
+    .progress-bar{
+        position: relative;
+        width: 90%;
+        height: 3px;
+        border-radius: 30px;
+        background: rgb(212, 202, 202);
+        //  background-color: #2887e3;
+        @media screen and (min-width: 992px) {
+            width: 70%;
+            left: 10%;
+        }
+        >.current-progres{
+            position: absolute;
+            width: 40%;
+            height: 3px;
+            background-color: #2887e3;
+            left: 0;
+        }
+    }
+    .duration{
+        font-weight: bolder;
+        @media screen and (max-width: 768px) {
+            font-weight: normal;            
+        }
+    }
+    .playList{
+        width: 90%;
+        left: 3%;
+        height: 90%;
+        background: rgb(215, 210, 210);
+        position: absolute;
+        top: 5%;
+
+    }
+}
